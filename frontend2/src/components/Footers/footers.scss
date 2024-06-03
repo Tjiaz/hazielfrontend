@@ -1,0 +1,86 @@
+.footer {
+  background-color: #019933ff;
+  color: white;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: small;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin: 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li:hover {
+  color: #c79732;
+  cursor: pointer;
+}
+
+.footer-section .social-icons i {
+  margin: 5px;
+  font-size: 20px;
+}
+
+.footer-section .download-app img {
+  margin: 5px;
+  width: 120px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+.horizontal_line {
+  border: 1px solid #c79732;
+}
+
+.footer-bottom .review-logos img {
+  margin: 10px;
+  width: 80px;
+}
+
+.footer-bottom p {
+  margin-top: 10px;
+  color: #c79732;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.donate-button {
+  display: inline-block;
+  background-color: transparent; /* Approximate color based on the image */
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 15px;
+  border: 1px solid #c79732;
+}
+
+.donate-button:hover {
+  background-color: #c79732; /* Approximate color based on the image */
+  color: black;
+}
