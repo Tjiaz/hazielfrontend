@@ -1,0 +1,17 @@
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  height: 60vh;
+}
+
+.team-column {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.img {
+  margin-bottom: 10px;
+}

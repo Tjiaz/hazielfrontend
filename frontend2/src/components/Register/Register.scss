@@ -1,0 +1,59 @@
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50vh; /* Ensure Register container takes full height of viewport */
+  margin-top: 100px;
+}
+
+.register-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.register-form {
+  flex: 1;
+}
+
+.register-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.register-image img {
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width as needed */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #019933ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #9a6534;
+}
