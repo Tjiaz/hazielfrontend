@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-t&@&q@uih3kcvk1v0yi^o=nh%a%ie4ksel1u*i07meurv)!cve
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://hazel-app-9a916a59af7f.herokuapp.com/","hazel-app-9a916a59af7f.herokuapp.com"]
 
 
 # Application definition
@@ -54,7 +54,9 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000","https://tjiaz.github.io/hazel/","hazel-app-9a916a59af7f.herokuapp.com"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000",
+                        "https://tjiaz.github.io/hazel/",
+                        "hazel-app-9a916a59af7f.herokuapp.com"]
 
 ROOT_URLCONF = "backend.urls"
 
