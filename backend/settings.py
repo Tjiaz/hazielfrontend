@@ -54,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000","https://tjiaz.github.io/hazel/"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000","https://tjiaz.github.io/hazel/","hazel-app-9a916a59af7f.herokuapp.com"]
 
 ROOT_URLCONF = "backend.urls"
 
