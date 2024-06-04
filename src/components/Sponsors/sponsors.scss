@@ -1,0 +1,21 @@
+.sponsors-container {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.sponsors-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors-logos img {
+  width: 100px; /* Adjust the size of the logos as needed */
+  height: auto;
+  margin: 0 10px; /* Adjust the spacing between logos as needed */
+  opacity: 0.5; /* Adjust the opacity of inactive logos */
+}
+
+.sponsors-logos img.active {
+  opacity: 1; /* Make the active logo fully visible */
+}
