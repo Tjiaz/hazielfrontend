@@ -56,14 +56,14 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = ["http://localhost:3000",
                         "https://tjiaz.github.io/hazel/",
-                        "hazel-app-9a916a59af7f.herokuapp.com"]
+                        "https://hazel-app-9a916a59af7f.herokuapp.com"]
 
 ROOT_URLCONF = "backend.urls"
 
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'frontend2' / 'dist'],
+        "DIRS": [BASE_DIR.joinpath('frontend2','dist')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
