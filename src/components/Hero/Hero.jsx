@@ -22,7 +22,7 @@ const Hero = () => {
   return (
     <div>
       <img
-        src={`/${images[Object.keys(images)[imageIndex]]}`}
+        src={`/static/${images[Object.keys(images)[imageIndex]]}`}
         alt="images"
         className="hero-image"
       />

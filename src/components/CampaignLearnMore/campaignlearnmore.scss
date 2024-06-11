@@ -1,0 +1,79 @@
+.campaign-details {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .breadcrumbs {
+      font-size: 14px;
+      margin-bottom: 10px;
+
+      a {
+        color: #019933ff;
+        text-decoration: none;
+      }
+    }
+
+    .post-info {
+      p {
+        margin: 5px 0;
+      }
+
+      h1 {
+        margin: 10px 0;
+        font-size: 28px;
+      }
+
+      .updated {
+        font-size: 14px;
+        color: #c79732;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .image-container {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .text-content {
+      p {
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .content {
+      flex-direction: row;
+
+      .image-container {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+
+      .text-content {
+        flex: 1;
+      }
+    }
+  }
+}

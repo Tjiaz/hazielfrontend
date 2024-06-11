@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TeamCard = ({ imgSrc, title, description, buttonText }) => {
+const TeamCard = ({ imgSrc, title, description, buttonText, id }) => {
   return (
     <div className="team-column">
       <img src={imgSrc} alt={title} className="img" />
@@ -11,7 +11,9 @@ const TeamCard = ({ imgSrc, title, description, buttonText }) => {
         <div className="teamunderline"></div>
       </div>
       <p>{description}</p>
-      <button className="button recent-button">{buttonText}</button>
+      <Link to={`/campaign/${id}`}>
+        <button className="button recent-button">{buttonText}</button>
+      </Link>
     </div>
   );
 };

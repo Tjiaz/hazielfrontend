@@ -18,7 +18,7 @@ const Footers = () => {
         <div className="footer-section branded">
           <h3>Hazel Charity</h3>
           <img
-            src="/images/logo2.jpeg"
+            src="/static/images/logo2.jpeg"
             alt="HAZEL Logo"
             height={50}
             width={50}
@@ -37,10 +37,10 @@ const Footers = () => {
         <div className="footer-section">
           <h4>Keep in touch</h4>
           <ul>
-            <li>Phone: 123-456-7890</li>
-            <li>Email: contact@hazel.org</li>
-            <li>1234 Street Name</li>
-            <li>Hazel Nigeria</li>
+            <li>Phone: +2348035963834</li>
+            <li>Email: hazelcharityfoundation@gmail.com</li>
+            <li>No 15 Orizor Close Amike Abba, Abakaliki</li>
+            <li>Ebonyi State Nigeria</li>
           </ul>
         </div>
         <div className="footer-section">
@@ -63,9 +63,9 @@ const Footers = () => {
               <FaYoutubeSquare />
             </i>
           </div>
-          <h6>DONATIONS</h6>
+         
           <Link to="/donate" className="donate-button">
-            Donate now
+            Donate
           </Link>
           <p>Your generous donation matters</p>
         </div>

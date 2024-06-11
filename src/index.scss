@@ -10,7 +10,15 @@
   justify-content: center;
   align-items: center;
 }
-
+.message {
+  padding: 10px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  text-align: center;
+}
 // .content {
 //   margin-top: 80px; /* Ensure content is not hidden behind the navbar */
 //   padding: 20px;

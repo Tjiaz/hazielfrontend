@@ -9,7 +9,7 @@ const Aboutus = () => {
         <header className="header">
           <div className="header-content">
             <h1>About</h1>
-            <p>Home | About</p>
+            <p>About Us</p>
           </div>
         </header>
 
@@ -19,7 +19,7 @@ const Aboutus = () => {
             <ul>
               <li>Accessibility</li>
               <li>Child Ambassador</li>
-              <li>Conditions</li>
+              <li>Women Empowerment</li>
               <li>Data Protection</li>
               <li>Diversity</li>
               <li>Legal Advisors</li>
@@ -29,7 +29,6 @@ const Aboutus = () => {
               <li>Our Patron</li>
               <li>Our Values</li>
               <li>Standards</li>
-              <li>Terms and Conditions for Donors</li>
               <li>Terms of Use</li>
             </ul>
           </aside>
@@ -66,38 +65,49 @@ const Aboutus = () => {
               Hazel provides fundraising support for families in these areas:
             </blockquote>
             <p>
-              We can help children with many different medical conditions. This
-              includes the treatment and support for conditions associated with
-              obsessive compulsive disorder (OCD), stress, attention deficit
-              hyperactivity disorder (ADHD), Autistic Spectrum Disorder (ASD),
-              and demand avoidance (PDA).
+              Among its primary initiatives are mental health support,
+              advocating for human rights, advancing education, and promoting
+              women's empowerment. Through these efforts, the foundation aims to
+              address systemic issues and uplift marginalized communities, both
+              in urban centers and rural areas. Central to its mission is
+              fostering community engagement and encouraging healthy living
+              practices.
             </p>
             <blockquote className="highlight">
-              We recognise that childhood is a critical and vulnerable stage
-              when health inequalities can have effects that last throughout
-              life. We are there at every step of this new, challenging and
-              often lonely journey; from birth, or diagnosis, in an emergency,
-              or at a time of crisis.
+              By empowering local residents and promoting collective action, the
+              foundation seeks to create sustainable change from the ground up.
+              Governed by a constitution grounded in principles of integrity,
+              transparency, and accountability, Haziel Charity Foundation
+              operates with a commitment to ethical stewardship of resources and
+              partnerships. Through strategic planning and collaboration, the
+              foundation not only provides immediate assistance to those in need
+              but also invests in long-term solutions. By empowering individuals
+              with the skills and resources necessary for self-sufficiency, it
+              aims to create lasting impact and build a more equitable society
+              for future generations.
             </blockquote>
             <p>
               If we can help you further please contact us on our Freephone
-              number: <a href="tel:08001691601">0800 169 1601</a>
+              number: <a href="tel:+2348035963834">+2348035963834</a>
             </p>
             <div className="image-cards">
               <div className="card">
-                <img src="/images/aboutimg1.jpeg" alt="Our Values" />
+                <img src="/static/images/aboutimg1.jpeg" alt="Our Values" />
                 <div className="card-title">Our Values</div>
               </div>
               <div className="card">
-                <img src="/images/aboutimg2.jpeg" alt="Accessibility" />
+                <img src="/static/images/aboutimg2.jpeg" alt="Accessibility" />
                 <div className="card-title">Accessibility</div>
               </div>
               <div className="card">
-                <img src="/images/aboutimg3.jpeg" alt="Child Ambassador" />
+                <img
+                  src="/static/images/aboutimg3.jpeg"
+                  alt="Child Ambassador"
+                />
                 <div className="card-title">Child Ambassador</div>
               </div>
               <div className="card">
-                <img src="/images/aboutimg4.jpeg" alt="Legal Advisors" />
+                <img src="/static/images/aboutimg4.jpeg" alt="Legal Advisors" />
                 <div className="card-title">Legal Advisors</div>
               </div>
             </div>

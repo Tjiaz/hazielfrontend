@@ -1,7 +1,8 @@
 .section-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 
-  justify-content: space-between;
+  gap: 20px;
   margin: 20px;
 }
 

@@ -1,15 +1,13 @@
 .title {
   text-align: center;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .underline {
   width: 10rem;
   height: 0.2rem;
   background-color: black;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .intro-section {
@@ -29,8 +27,8 @@
 
 .video-text-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns layout */
-  gap: 20px; /* Adjust gap between video and text */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .video-container {
@@ -39,13 +37,13 @@
   justify-content: center;
 }
 
-/* Example styling for video placeholder */
 .video-placeholder {
   width: 100%;
   height: 250px;
-  background-color: #ccc; /* Placeholder background color */
+  background-color: #ccc;
   position: relative;
 }
+
 .responsive_video {
   width: 100%;
   height: auto;
@@ -55,43 +53,32 @@
 .video-placeholder video {
   object-fit: cover;
   height: 100%;
-  width: 100;
+  width: 100%;
   position: absolute;
 }
 
-/* Small Devices (Tablets, 576px and up) */
+/* Extra Small Devices (Portrait Phones, less than 576px) */
 @media (max-width: 575.98px) {
   .video-text-container {
     grid-template-columns: 1fr;
   }
 
   .video-placeholder {
-    height: 25 0px;
-  }
-  .text-container {
-    text-align: justify;
-    padding: 20px 20px;
-    font-size: smaller;
-    margin-bottom: 20px;
-    grid-template-columns: 1fr;
-    font-size: medium;
-    font-weight: 300;
+    height: 200px;
   }
 
-  .text-container button {
-    font-size: small;
-    padding: 8px 16px;
+  .text-container {
+    text-align: justify;
+    padding: 20px;
+    font-size: smaller;
   }
 
   .intro-section {
-    background-color: #c79732;
     padding: 20px;
     display: grid;
-    width: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
     height: 100%;
-    margin-bottom: 30px;
   }
 }
 
@@ -100,40 +87,52 @@
   .video-text-container {
     grid-template-columns: 1fr;
   }
+
   .video-placeholder {
-    height: 25 0px;
+    height: 250px;
   }
+
   .intro-section {
-    background-color: #c79732;
     padding: 20px;
     display: grid;
-    width: 100%;
     grid-template-columns: 1fr;
     justify-items: center;
     height: 100%;
-    margin-bottom: 15px;
   }
 
   .text-container {
-    text-align: justify;
-    padding: 20px 20px;
+    padding: 20px;
     width: 100%;
-    height: 100%;
   }
 }
 
 /* Medium Devices (Desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  .video-text-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .hero-image {
     height: 400px;
-    width: 720px;
+    width: 100%;
   }
 }
 
 /* Large Devices (Large Desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  .video-text-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .hero-image {
     height: 650px;
-    width: 1440px;
+    width: 100%;
+  }
+}
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+  .video-text-container {
+    grid-template-columns: 1fr 1fr;
   }
 }

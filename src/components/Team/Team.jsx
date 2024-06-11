@@ -4,11 +4,13 @@ import teamData from "../../data";
 import TeamCard from "./Teamcard";
 
 const Team = () => {
+  const displayTeam = teamData.slice(0, 3);
   return (
     <section className="section-container">
-      {teamData.map((team) => (
+      {displayTeam.map((team) => (
         <TeamCard
           key={team.id}
+          id={team.id}
           imgSrc={team.imgSrc}
           title={team.title}
           description={team.description}

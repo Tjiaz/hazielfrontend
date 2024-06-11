@@ -5,6 +5,7 @@
 
 .sponsors-logos {
   display: flex;
+  flex-wrap: wrap; /* Allow logos to wrap to the next line */
   justify-content: center;
   align-items: center;
 }
@@ -12,10 +13,42 @@
 .sponsors-logos img {
   width: 100px; /* Adjust the size of the logos as needed */
   height: auto;
-  margin: 0 10px; /* Adjust the spacing between logos as needed */
+  margin: 10px; /* Adjust the spacing between logos */
   opacity: 0.5; /* Adjust the opacity of inactive logos */
 }
 
 .sponsors-logos img.active {
   opacity: 1; /* Make the active logo fully visible */
+}
+
+/* Extra Small Devices (Portrait Phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .sponsors-logos img {
+    width: 60px; /* Smaller logos for small screens */
+    margin: 5px; /* Reduce spacing between logos */
+  }
+}
+
+/* Small Devices (Tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .sponsors-logos img {
+    width: 80px; /* Medium-sized logos for tablets */
+    margin: 7px; /* Adjust spacing between logos */
+  }
+}
+
+/* Medium Devices (Desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .sponsors-logos img {
+    width: 90px; /* Slightly larger logos for medium screens */
+    margin: 8px; /* Adjust spacing between logos */
+  }
+}
+
+/* Large Devices (Large Desktops, 992px and up) */
+@media (min-width: 992px) {
+  .sponsors-logos img {
+    width: 100px; /* Default size for large screens */
+    margin: 10px; /* Default spacing between logos */
+  }
 }

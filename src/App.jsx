@@ -24,6 +24,10 @@ import Sponsors from "./components/Sponsors/Sponsors";
 import Footers from "./components/Footers/Footers";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Campaign from "./components/Campaign/Campaign";
+import { getQueryParams } from "../utils";
+import Eventts from "./components/Eventts/Eventts";
+import CampaignLearnMore from "./components/CampaignLearnMore/CampaignLearnMore";
+import TeamCard from "./components/Team/Teamcard";
 
 function App() {
   const location = useLocation();
@@ -32,6 +36,7 @@ function App() {
   const [remWords, setRemWords] = useState(false);
   const [showLinks, setShowLinks] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     // Split the entire text into words
@@ -71,13 +76,37 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const queryParams = getQueryParams();
+    const message = queryParams.get("message");
+    if (message) {
+      setMessage(message);
+      // Clear the query parameter after displaying the message
+      const url = new URL(window.location);
+      url.searchParams.delete("message");
+      window.history.replaceState({}, document.title, url);
+      // Set a timeout to clear the message after 5 seconds
+      const timer = setTimeout(() => {
+        setMessage("");
+      }, 5000);
+
+      // Clean up the timer if the component is unmounted
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <>
+      {message && <p className="message">{message}</p>}
       <div className="top-section">
         <Link to="/joinus">
           <button className="join-btn">Contact </button>
         </Link>
-        <img src="/images/logo2.jpeg" alt="HAZEL Logo" className="logo" />
+        <img
+          src="/static/images/logo2.jpeg"
+          alt="HAZEL Logo"
+          className="logo"
+        />
         <button className="support-btn">Support</button>
       </div>
       <div className="description">
@@ -104,8 +133,8 @@ function App() {
               About
             </Link>
 
-            <Link to="/support-us" className="nav-item">
-              Projects
+            <Link to="/eventts" className="nav-item">
+              Events
             </Link>
             <Link to="/contact" className="nav-item">
               Contact-us
@@ -130,7 +159,10 @@ function App() {
         <Route path="/Aboutus" element={<Aboutus />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Campaign" element={<Campaign />} />
+        <Route path="/Eventts" element={<Eventts />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/campaign/:id" element={<CampaignLearnMore />} />
+        <Route path="/campaign/:id" element={<TeamCard />} />
       </Routes>
     </>
   );
