@@ -97,17 +97,16 @@ function App() {
 
   return (
     <>
-      {message && <p className="message">{message}</p>}
       <div className="top-section">
         <Link to="/joinus">
-          <button className="join-btn">Contact </button>
+          <button className="join-btn">Support </button>
         </Link>
         <img
           src="/static/images/logo2.jpeg"
           alt="HAZEL Logo"
           className="logo"
         />
-        <button className="support-btn">Support</button>
+        <button className="support-btn">Each other</button>
       </div>
       <div className="description">
         <p>
@@ -136,9 +135,9 @@ function App() {
             <Link to="/eventts" className="nav-item">
               Events
             </Link>
-            <Link to="/contact" className="nav-item">
+            {/* <Link to="/contact" className="nav-item">
               Contact-us
-            </Link>
+            </Link> */}
             <Link to="/campaign" className="nav-item">
               Campaigns
             </Link>
@@ -160,7 +159,7 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/Campaign" element={<Campaign />} />
         <Route path="/Eventts" element={<Eventts />} />
-        <Route path="/Contact" element={<Contact />} />
+        {/* <Route path="/Contact" element={<Contact />} /> */}
         <Route path="/campaign/:id" element={<CampaignLearnMore />} />
         <Route path="/campaign/:id" element={<TeamCard />} />
       </Routes>

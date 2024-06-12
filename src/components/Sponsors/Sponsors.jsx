@@ -31,7 +31,7 @@ const Sponsors = () => {
         {sponsorLogos.map((logo, index) => (
           <img
             key={index}
-            src={`/static/images/${logo}`}
+            src={`/images/${logo}`}
             alt={`Sponsor ${index + 1}`}
             className={index === currentSlide ? "active" : ""}
           />
