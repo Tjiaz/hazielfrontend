@@ -17,7 +17,7 @@ import Contact from "./components/Contact/contact";
 // import "./components/Navbar/navbar.scss";
 
 import Spinner from "./components/spinner/Spinner";
-import Joinhazel from "./components/JoinHazel/Joinhazel";
+
 import Recentnews from "./components/RecentNews/Recentnews";
 import Team from "./components/Team/Team";
 import Sponsors from "./components/Sponsors/Sponsors";
@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     // Split the entire text into words
     const allWords =
-      "HAZEL - HAZEL Charity Foundation. A not-for-profit and non-political organization to firmly and solemnly revolve to provide for ourselves a constitution and to be governed by the provisions therein contained.".split(
+      "haziel - haziel Charity Foundation. A not-for-profit and non-political organization to firmly and solemnly revolve to provide for ourselves a constitution and to be governed by the provisions therein contained.".split(
         " "
       );
 
@@ -103,7 +103,7 @@ function App() {
         </Link>
         <img
           src="/static/images/logo2.jpeg"
-          alt="HAZEL Logo"
+          alt="haziel Logo"
           className="logo"
         />
         <button className="support-btn">Each other</button>

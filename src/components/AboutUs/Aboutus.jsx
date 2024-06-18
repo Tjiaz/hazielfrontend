@@ -40,11 +40,11 @@ const Aboutus = () => {
               and sharing!"
             </blockquote>
             <p>
-              Hazel foundation provides support for families to help their
+              haziel foundation provides support for families to help their
               children with disabilities and sickness.
             </p>
             <p>
-              Hazel foundation is passionate about the relief of sickness and
+              haziel foundation is passionate about the relief of sickness and
               preservation of good physical and mental health of children and
               young people under the age of 25 years resident in Africa, Nigeria
               in particular, and without limitation, by providing and assisting
@@ -62,7 +62,7 @@ const Aboutus = () => {
               allowFullScreen
             ></iframe>
             <blockquote>
-              Hazel provides fundraising support for families in these areas:
+              haziel provides fundraising support for families in these areas:
             </blockquote>
             <p>
               Among its primary initiatives are mental health support,
