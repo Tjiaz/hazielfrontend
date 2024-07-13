@@ -51,10 +51,14 @@ const Navbar = () => {
     >
       <div className="top-section">
         <Link to="/joinus">
-          <button className="join-btn">Contact</button>
+          <button className="join-btn">Support</button>
         </Link>
-        <img src="/images/logo2.jpeg" alt="haziel Logo" className="logo" />
-        <button className="support-btn">Support</button>
+        <img
+          src="/hazielfrontend/logo2.jpeg"
+          alt="haziel Logo"
+          className="logo"
+        />
+        <button className="support-btn">Each other</button>
       </div>
       <div className="description">
         <p>

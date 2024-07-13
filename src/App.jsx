@@ -17,7 +17,7 @@ import Contact from "./components/Contact/contact";
 // import "./components/Navbar/navbar.scss";
 
 import Spinner from "./components/spinner/Spinner";
-
+// import Joinhaziel from "./components/Joinhaziel/Joinhaziel";
 import Recentnews from "./components/RecentNews/Recentnews";
 import Team from "./components/Team/Team";
 import Sponsors from "./components/Sponsors/Sponsors";
@@ -97,16 +97,17 @@ function App() {
 
   return (
     <>
+      {message && <p className="message">{message}</p>}
       <div className="top-section">
         <Link to="/joinus">
-          <button className="join-btn">Support </button>
+          <button className="join-btn">Contact </button>
         </Link>
         <img
-          src="/static/images/logo2.jpeg"
+          src="/hazelfrontend/images/logo2.jpeg"
           alt="haziel Logo"
           className="logo"
         />
-        <button className="support-btn">Each other</button>
+        <button className="support-btn">Support</button>
       </div>
       <div className="description">
         <p>
