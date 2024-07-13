@@ -33,6 +33,7 @@ function App() {
   const [showLinks, setShowLinks] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+ 
   useEffect(() => {
     // Split the entire text into words
     const allWords =

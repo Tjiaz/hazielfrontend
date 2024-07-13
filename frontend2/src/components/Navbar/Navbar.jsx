@@ -53,7 +53,7 @@ const Navbar = () => {
         <Link to="/joinus">
           <button className="join-btn">Contact</button>
         </Link>
-        <img src="/images/logo2.jpeg" alt="haziel Logo" className="logo" />
+        <img src="/images/logo2.jpeg" alt="haziel Logo" className="logo"/>
         <button className="support-btn">Support</button>
       </div>
       <div className="description">
