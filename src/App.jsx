@@ -103,7 +103,7 @@ function App() {
           <button className="join-btn">Contact </button>
         </Link>
         <img
-          src="/hazelfrontend/images/logo2.jpeg"
+          src="/hazielfrontend/images/logo2.jpeg"
           alt="haziel Logo"
           className="logo"
         />
