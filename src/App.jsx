@@ -41,7 +41,7 @@ function App() {
   useEffect(() => {
     // Split the entire text into words
     const allWords =
-      "haziel - haziel Charity Foundation. A not-for-profit and non-political organization to firmly and solemnly revolve to provide for ourselves a constitution and to be governed by the provisions therein contained.".split(
+      "Haziel - Haziel Charity Foundation. A not-for-profit and non-political organization to firmly and solemnly revolve to provide for ourselves a constitution and to be governed by the provisions therein contained.".split(
         " "
       );
 
