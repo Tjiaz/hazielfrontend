@@ -37,10 +37,11 @@ const Footers = () => {
         <div className="footer-section">
           <h4>Keep in touch</h4>
           <ul>
-            <li>Phone: 123-456-7890</li>
-            <li>Email: contact@Haziel.org</li>
-            <li>1234 Street Name</li>
-            <li>Haziel Nigeria</li>
+            <li>Phone:+2348062953917</li>
+            <li>Whatsapp-only:+2348035963834</li>
+            <li>Email:hazielcharityfoundation@gmail.com</li>
+            <li>No 15 Orizor Close Amike Abba, Abakaliki</li>
+            <li>Ebonyi State Nigeria</li>
           </ul>
         </div>
         <div className="footer-section">

@@ -36,7 +36,7 @@ const Intro = () => {
     <main>
       <section className="intro-section">
         <div className="title">
-          <h2>Introduction to Haziel Charity Foundation</h2>
+          <h2>Welcome to Haziel Charity Foundation</h2>
           <div className="underline"></div>
         </div>
         <div className="video-text-container">
