@@ -50,15 +50,17 @@ const Navbar = () => {
       ref={navbarRef}
     >
       <div className="top-section">
-        <Link to="/joinus">
-          <button className="join-btn">Support</button>
+        <Link to="/contact">
+          <button className="join-btn">Contact</button>
         </Link>
         <img
           src="/hazielfrontend/logo2.jpeg"
           alt="haziel Logo"
           className="logo"
         />
-        <button className="support-btn">Each other</button>
+        <Link to="/fundraising">
+          <button className="support-btn">Support</button>
+        </Link>
       </div>
       <div className="description">
         <p>
@@ -72,23 +74,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// import React from "react";
-// import "./navbar.scss";
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <div className="navbar-container">
-//       <div className="top-section">
-//         <Link to="/joinus">
-//           <button className="join-btn">Join haziel</button>
-//         </Link>
-//         <img src="/logo2.png" alt="haziel Logo" className="logo" />
-//         <button className="support-btn">Support haziel</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;

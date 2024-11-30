@@ -12,7 +12,7 @@ import Hero from "./components/Hero/Hero";
 import Aboutus from "./components/AboutUs/Aboutus";
 import Register from "./components/Register/Register";
 import Intro from "./components/Intro/Intro";
-import Contact from "./components/Contact/contact";
+import Contact from "./components/Contact/Contact";
 
 // import "./components/Navbar/navbar.scss";
 
@@ -28,6 +28,8 @@ import { getQueryParams } from "../utils";
 import Eventts from "./components/Eventts/Eventts";
 import CampaignLearnMore from "./components/CampaignLearnMore/CampaignLearnMore";
 import TeamCard from "./components/Team/Teamcard";
+import Donate from "./components/Donate/Donate";
+import Fundraising from "./components/fundraising/Fundraising";
 
 function App() {
   const location = useLocation();
@@ -99,15 +101,13 @@ function App() {
     <>
       {message && <p className="message">{message}</p>}
       <div className="top-section">
-        <Link to="/joinus">
+        <Link to="/contact">
           <button className="join-btn">Contact </button>
         </Link>
-        <img
-          src="/hazielfrontend/images/logo2.jpeg"
-          alt="haziel Logo"
-          className="logo"
-        />
-        <button className="support-btn">Support</button>
+        <img src="/images/logo2.jpeg" alt="haziel Logo" className="logo" />
+        <Link to="/fundraising">
+          <button className="support-btn">Support</button>
+        </Link>
       </div>
       <div className="description">
         <p>
@@ -136,15 +136,10 @@ function App() {
             <Link to="/eventts" className="nav-item">
               Events
             </Link>
-            {/* <Link to="/contact" className="nav-item">
-              Contact-us
-            </Link> */}
+
             <Link to="/campaign" className="nav-item">
               Campaigns
             </Link>
-            {/* <Link to="/register" className="nav-item">
-              Register
-            </Link> */}
           </>
         )}
       </div>
@@ -160,9 +155,12 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/Campaign" element={<Campaign />} />
         <Route path="/Eventts" element={<Eventts />} />
-        {/* <Route path="/Contact" element={<Contact />} /> */}
+        <Route path="/Contact" element={<Contact />} />
+
         <Route path="/campaign/:id" element={<CampaignLearnMore />} />
         <Route path="/campaign/:id" element={<TeamCard />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/Fundraising" element={<Fundraising />} />
       </Routes>
     </>
   );

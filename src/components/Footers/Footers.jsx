@@ -68,7 +68,7 @@ const Footers = () => {
           <Link to="/donate" className="donate-button">
             Donate
           </Link>
-          <p>Your generous donation matters</p>
+          <p className="donate_text">Your generous donation matters</p>
         </div>
       </div>
       <div className="footer-bottom">
@@ -77,7 +77,7 @@ const Footers = () => {
           © {date} haziel Charity. All rights reserved.
           <Link style={style} to="https://www.azcodezone.com">
             {" "}
-            Powered by Azcodezone
+            Powered by AzByteGems
           </Link>
         </p>
       </div>

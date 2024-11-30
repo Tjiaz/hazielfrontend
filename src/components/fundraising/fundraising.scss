@@ -1,0 +1,69 @@
+.fundraise {
+  text-align: center;
+}
+
+.main-title {
+  background-color: #019933ff;
+  padding: 20px;
+  color: white;
+
+  h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  p {
+    margin: 10px auto 0;
+    color: #fff;
+    width: 50%;
+  }
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #d4f4d2; // Light green background
+  color: #007f00; // Green text color
+  padding: 2rem;
+  border-radius: 10px; // Optional, for rounded corners
+  margin: 1rem auto; // Centers the section on the page horizontally
+  max-width: 800px; // Optional, limits the section's width for readability
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%; // Ensures the buttons take up the full width of the parent
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007f00; // Green background
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #fff; // Deep green on hover
+      color: #007f00; // White text on hover
+    }
+  }
+}

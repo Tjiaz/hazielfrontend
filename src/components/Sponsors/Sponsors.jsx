@@ -9,7 +9,6 @@ const Sponsors = () => {
     "logo3.jpeg",
     "logo4.jpeg",
     "logo5.jpeg",
-    "logo6.jpeg", // Last logo for slideshow
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
