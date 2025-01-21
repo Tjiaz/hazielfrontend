@@ -30,6 +30,7 @@ import CampaignLearnMore from "./components/CampaignLearnMore/CampaignLearnMore"
 import TeamCard from "./components/Team/Teamcard";
 import Donate from "./components/Donate/Donate";
 import Fundraising from "./components/fundraising/Fundraising";
+import EventDetails from "./components/EventDetails/EventDetails";
 
 function App() {
   const location = useLocation();
@@ -39,6 +40,7 @@ function App() {
   const [showLinks, setShowLinks] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Split the entire text into words
@@ -98,6 +100,7 @@ function App() {
   }, []);
 
   return (
+    
     <>
       {message && <p className="message">{message}</p>}
       <div className="top-section">
@@ -155,6 +158,7 @@ function App() {
         <Route path="/Register" element={<Register />} />
         <Route path="/Campaign" element={<Campaign />} />
         <Route path="/Eventts" element={<Eventts />} />
+        <Route path="/event/:id" element={<EventDetails />} />
         <Route path="/Contact" element={<Contact />} />
 
         <Route path="/campaign/:id" element={<CampaignLearnMore />} />

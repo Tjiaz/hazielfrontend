@@ -1,46 +1,57 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./eventts.scss";
 import Footers from "../Footers/Footers";
 
 const Eventts = () => {
+  const navigate = useNavigate();
+
+  const events = [
+    {
+      id: 1,
+      title: "Haziel Charity Inauguration 2024",
+      host: "Haziel Charity",
+      date: "October 15, 2024",
+      mainImage: "/images/event2024/1.png",
+      galleryImages: [
+        "/images/event2024/1.png",
+        "/images/event2024/2.png",
+        "/images/event2024/3.png",
+        // Add more images as needed
+      ],
+      description: "Launching of Haziel Charity Foundation.",
+      fullDescription: "Extended description for the event page...",
+      location: "Event Location",
+      time: "10:00 AM - 4:00 PM",
+    },
+    {
+      id: 2,
+      title: "Charity Gala",
+      host: "Community Foundation",
+
+      date: "December 20, 2024",
+      mainImage: "/images/campaignpix1.jpeg",
+      galleryImages: [
+        "/images/event2024/1.png",
+        "/images/event2024/2.png",
+        "/images/event2024/3.png",
+        // Add more images as needed
+      ],
+      description: "Annual fundraising event for education initiatives.",
+      fullDescription: "Extended description for the event page...",
+      location: "Event Location",
+      time: "11:00 AM - 5:00 PM",
+    },
+
+    // Add more events as needed
+  ];
+
+  const handleLearnMore = (eventId) => {
+    navigate(`/event/${eventId}`);
+  };
+
   return (
     <div className="event-container">
-      {/* <header className="event-header">
-        <nav className="navbar">
-          <div className="logo">edSeed</div>
-          <ul className="nav-links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/campaigns">Campaigns</a>
-            </li>
-            <li>
-              <a href="/about">Get To Know Us</a>
-            </li>
-            <li>
-              <a href="/resources">Students Campaign Resources</a>
-            </li>
-            <li>
-              <a href="/funds">Seed Funds</a>
-            </li>
-            <li>
-              <a href="/events">Events</a>
-            </li>
-            <li>
-              <a href="/blog">Blog</a>
-            </li>
-          </ul>
-          <div className="nav-buttons">
-            <button className="donate-button">Donate</button>
-            <button className="campaign-button">Start Campaign</button>
-            <a href="/login">Log In / Sign Up</a>
-          </div>
-        </nav>
-        <div className="event-banner">
-          <h1>Events</h1>
-        </div>
-      </header> */}
       <div className="search-container">
         <input
           type="text"
@@ -49,23 +60,34 @@ const Eventts = () => {
         />
       </div>
       <div className="events-grid">
-        <div className="event-card">
-          <img src="path-to-image" alt="Event 1" />
-          <div className="event-info">
-            <h3>Event 1</h3>
-            <p>Hosted by: Host Name</p>
+        {events.map((event) => (
+          <div className="event-card" key={event.id}>
+            <div className="event-image">
+              <img
+                src={event.mainImage}
+                alt={event.title}
+                onError={(e) => {
+                  e.target.src = "/images/default.jpg";
+                  e.target.onerror = null;
+                }}
+              />
+            </div>
+            <div className="event-info">
+              <h3>{event.title}</h3>
+              <p className="host">Hosted by: {event.host}</p>
+              <p className="date">{event.date}</p>
+              <p className="description">{event.description}</p>
+              <button
+                className="event-button"
+                onClick={() => handleLearnMore(event.id)}
+              >
+                Learn More
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="event-card">
-          <img src="path-to-image" alt="Event 2" />
-          <div className="event-info">
-            <h3>Event 2</h3>
-            <p>Hosted by: Host Name</p>
-          </div>
-        </div>
-        {/* Add more event cards as needed */}
+        ))}
       </div>
-      <Footers/>
+      <Footers />
     </div>
   );
 };
