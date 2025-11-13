@@ -1,7 +1,6 @@
-import React from "react";
 import "./campaign.scss";
+import { campaignData } from "../../data2"; // 👈 use this
 import Campaigncard from "./Campaigncard";
-import teamData from "../../data";
 import Footers from "../Footers/Footers";
 
 const Campaign = () => {
@@ -9,19 +8,19 @@ const Campaign = () => {
     <div className="campaign">
       <main>
         <section className="main-title">
-          <h1>People's Helped 2023</h1>
-          <p>Haziel Charity Foundation 2023</p>
+          <h1>People Helped</h1>
+          <p>Haziel Charity Foundation</p>
         </section>
+
         <section className="people-helped">
-          {teamData.map((team) => (
+          {campaignData.map((campaign) => (
             <Campaigncard
-              key={team.id}
-              id={team.id}
-              imgSrc={team.imgSrc}
-              title={team.title}
-              description={team.description}
-              buttonText={team.buttonText}
-              link={team.link}
+              key={campaign.id}
+              id={campaign.id}
+              imgSrc={campaign.imgSrc}
+              title={campaign.title}
+              description={campaign.description}
+              buttonText={campaign.buttonText}
             />
           ))}
         </section>

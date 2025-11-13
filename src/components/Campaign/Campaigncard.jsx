@@ -1,5 +1,6 @@
-import React from "react";
-import { campaignData } from "../../data2";
+
+import PropTypes from "prop-types";
+
 import { Link } from "react-router-dom";
 
 const Campaigncard = ({ imgSrc, title, description, buttonText, id }) => {
@@ -16,6 +17,14 @@ const Campaigncard = ({ imgSrc, title, description, buttonText, id }) => {
       </Link>
     </div>
   );
+};
+
+Campaigncard.propTypes = {
+  imgSrc: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  buttonText: PropTypes.string,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default Campaigncard;

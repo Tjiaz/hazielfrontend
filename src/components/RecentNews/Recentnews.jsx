@@ -1,4 +1,3 @@
-import React from "react";
 import "./recentnew.scss";
 import { Link, useNavigate } from "react-router-dom";
 

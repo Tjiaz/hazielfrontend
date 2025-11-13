@@ -97,8 +97,46 @@ $gradient-right: linear-gradient(
   }
 
   .text-container {
-    text-align: justify;
-    padding: 20px;
+    text-align: left; // Changed from justify to left
+    padding: 0 20px;
+    flex: 1 1 50%;
+    p {
+      color: black !important;
+      font-size: medium !important;
+      line-height: 1.6; // Added for better readability
+      margin: 0 auto; // Center the paragraph
+      max-width: 90%; // Limit width on larger screens
+    }
+  }
+
+  /* Extra Small Devices (Portrait Phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    // ... other styles remain the same ...
+
+    .text-container {
+      text-align: left;
+      padding: 10px; // Reduced padding
+      p {
+        font-size: 16px !important; // Adjusted font size for mobile
+        margin: 0 15px; // Add margin on both sides
+        max-width: 100%; // Allow text to use available width
+        line-height: 1.5; // Slightly reduced line height for mobile
+      }
+    }
+  }
+
+  /* Small Devices (Tablets, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    // ... other styles remain the same ...
+
+    .text-container {
+      padding: 15px;
+      width: 100%;
+      p {
+        margin: 0 20px; // Add margin on both sides
+        max-width: 100%;
+      }
+    }
   }
 
   .intro-section {

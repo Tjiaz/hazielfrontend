@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./eventts.scss";
 import Footers from "../Footers/Footers";
@@ -17,6 +16,8 @@ const Eventts = () => {
         "/images/event2024/1.png",
         "/images/event2024/2.png",
         "/images/event2024/3.png",
+        "/images/charity4.jpeg",
+        "/images/charity3.mp4",
         // Add more images as needed
       ],
       description: "Launching of Haziel Charity Foundation.",
@@ -26,21 +27,21 @@ const Eventts = () => {
     },
     {
       id: 2,
-      title: "Charity Gala",
+      title: "2025 Outreach Programme",
       host: "Community Foundation",
 
-      date: "December 20, 2024",
-      mainImage: "/images/campaignpix1.jpeg",
+      date: "December 2, 2025",
+      mainImage: "/images/Outreach.jpeg",
       galleryImages: [
         "/images/event2024/1.png",
-        "/images/event2024/2.png",
-        "/images/event2024/3.png",
+
         // Add more images as needed
       ],
-      description: "Annual fundraising event for education initiatives.",
+      description:
+        "Free Medical outreach,ditributionof parliatives, widow empowerment,scholarships,etc..",
       fullDescription: "Extended description for the event page...",
-      location: "Event Location",
-      time: "11:00 AM - 5:00 PM",
+      location: "WDC Abakaliki Ebonyi State",
+      time: "12:00 PM",
     },
 
     // Add more events as needed

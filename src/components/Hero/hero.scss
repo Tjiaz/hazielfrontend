@@ -1,8 +1,84 @@
-/* Small Devices (Tablets, 576px and up) */
+// hero.scss
+.hero-mobile {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: repeating-radial-gradient(#f8f1f1ee 87%, #3fa7b4 90%);
+    background-size: 50px 50px;
+    opacity: 0.4; // Adjust opacity here
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3; // Adjust opacity here
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); // Adjust opacity here
+    z-index: 2;
+  }
+
+  .typing-text {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 1.5rem;
+      color: #019933ff; // Changed to white for better contrast
+      margin: 0;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px #c79732; // Added shadow for better readability
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      margin-left: 5px;
+      background-color: #ffffff;
+      animation: blink 1s infinite;
+    }
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Mobile view */
 @media (max-width: 575.98px) {
-  .hero-image {
-    height: 230px;
-    width: 420px;
+  .hero-mobile {
+    display: block;
+  }
+
+  .hero-desktop {
+    display: none;
   }
 }
 
@@ -12,6 +88,9 @@
     height: 300px;
     width: 520px;
   }
+  .hero-desktop {
+    display: none;
+  }
 }
 
 /* Medium Devices (Desktops, 768px and up) */
@@ -20,12 +99,18 @@
     height: 400px;
     width: 720px;
   }
+  .hero-desktop {
+    display: none;
+  }
 }
 
 /* Large Devices (Large Desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 992px) {
   .hero-image {
     height: 650px;
     width: 1440px;
+  }
+  .hero-mobile {
+    display: none;
   }
 }

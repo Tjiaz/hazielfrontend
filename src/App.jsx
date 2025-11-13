@@ -13,8 +13,9 @@ import Aboutus from "./components/AboutUs/Aboutus";
 import Register from "./components/Register/Register";
 import Intro from "./components/Intro/Intro";
 import Contact from "./components/Contact/Contact";
+import EventModal from "./components/EventModal/EventModal";
 
-// import "./components/Navbar/navbar.scss";
+
 
 import Spinner from "./components/spinner/Spinner";
 // import Joinhaziel from "./components/Joinhaziel/Joinhaziel";
@@ -99,15 +100,29 @@ function App() {
     }
   }, []);
 
+  useEffect(() => {
+    if (window.innerWidth > 767.98) {
+      setShowLinks(true); // Ensure links are shown on larger screens
+    } else {
+      setShowLinks(false); // Hide links on smaller screens
+    }
+  }, [location]);
+
+  const handleNavItemClick = () => {
+    setShowLinks(false);
+  };
+
   return (
-    
     <>
+      {isHomePage && <EventModal />}
       {message && <p className="message">{message}</p>}
       <div className="top-section">
         <Link to="/contact">
           <button className="join-btn">Contact </button>
         </Link>
-        <img src="/images/logo2.jpeg" alt="haziel Logo" className="logo" />
+        <Link to="/home">
+          <img src="/images/logo2.jpeg" alt="haziel Logo" className="logo" />
+        </Link>
         <Link to="/fundraising">
           <button className="support-btn">Support</button>
         </Link>
@@ -128,22 +143,34 @@ function App() {
         )}
 
         {showLinks && (
-          <>
-            <Link to="/home" className="nav-item">
+          <div className="nav-items-container">
+            <Link to="/home" className="nav-item" onClick={handleNavItemClick}>
               Home
             </Link>
-            <Link to="/aboutus" className="nav-item">
+            <Link
+              to="/aboutus"
+              className="nav-item"
+              onClick={handleNavItemClick}
+            >
               About
             </Link>
 
-            <Link to="/eventts" className="nav-item">
+            <Link
+              to="/eventts"
+              className="nav-item"
+              onClick={handleNavItemClick}
+            >
               Events
             </Link>
 
-            <Link to="/campaign" className="nav-item">
+            <Link
+              to="/campaign"
+              className="nav-item"
+              onClick={handleNavItemClick}
+            >
               Campaigns
             </Link>
-          </>
+          </div>
         )}
       </div>
       {isHomePage && <Hero />}

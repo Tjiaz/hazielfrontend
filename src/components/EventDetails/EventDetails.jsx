@@ -1,4 +1,3 @@
-import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./event_details.scss";
 
@@ -29,12 +28,29 @@ const EventDetails = () => {
         "/images/event2024/17.png",
         "/images/event2024/75.png",
       ],
+      videos: [
+        "/images/charity2.mp4",
+        "/images/charity3.mp4",
+        "/images/charity5.mp4",
+      ],
       description: "Launching of Haziel Charity Foundation.",
       fullDescription: "Inauguration ceremony of haziel charity foundation...",
       location: "Nigeria",
       time: "10:00 AM - 4:00 PM",
     },
-    // ... other events
+    {
+      id: 2,
+      title: "Haziel Charity 2025 Outreach Programme",
+      host: "Haziel Charity",
+      date: "December 2, 2025",
+      mainImage: "/images/Outreach.jpeg",
+      galleryImages: [""],
+      videos: [""],
+      description: "Coming",
+      fullDescription: "Coming soon",
+      location: "Abakaliki Nigeria",
+      time: "12:00PM",
+    },
   ];
 
   const event = events.find((e) => e.id === parseInt(id));
@@ -81,6 +97,20 @@ const EventDetails = () => {
                   e.target.onerror = null;
                 }}
               />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="event-videos">
+        <h2>Event Videos</h2>
+        <div className="video-grid">
+          {event.videos.map((video, index) => (
+            <div className="video-item" key={index}>
+              <video controls>
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           ))}
         </div>

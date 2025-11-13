@@ -88,6 +88,29 @@
       }
     }
   }
+
+  .event-videos {
+    h2 {
+      color: #333;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+
+      .video-item {
+        video {
+          width: 100%;
+          height: 200px;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -100,6 +123,10 @@
 
     .main-image {
       height: 300px;
+    }
+
+    .event-videos .video-item video {
+      height: 150px;
     }
   }
 }

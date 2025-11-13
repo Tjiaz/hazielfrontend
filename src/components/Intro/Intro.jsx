@@ -36,7 +36,7 @@ const Intro = () => {
     <main>
       <section className="intro-section">
         <div className="title">
-          <h2>Welcome to Haziel Charity Foundation</h2>
+          <h2>Welcome to Our Foundation</h2>
           <div className="underline"></div>
         </div>
         <div className="video-text-container">
@@ -51,7 +51,7 @@ const Intro = () => {
                 poster="poster.jpg"
                 className="responsive_video"
               >
-                <source src="/video.mp4" type="video/mp4" />
+                <source src="images/charity5.mp4" type="video/mp4" />
                 <p>Your browser does not support the video tag.</p>
               </video>
             </div>
