@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 ADD THIS
 import "./eventModal.scss";
 
 const EventModal = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate(); // 👈 INIT NAVIGATE
 
   useEffect(() => {
     const hasSeen = localStorage.getItem("haziel_outreach_2025_seen");
@@ -16,16 +18,17 @@ const EventModal = () => {
     localStorage.setItem("haziel_outreach_2025_seen", "true");
   };
 
+  const goToEvent = () => {
+    handleClose();
+    navigate("/event/2"); // 👈 SEND USER TO EVENT ID 2
+  };
+
   if (!open) return null;
 
   return (
     <div className="event-modal__backdrop">
       <div className="event-modal">
-        <button
-          className="event-modal__close"
-          onClick={handleClose}
-          aria-label="Close outreach notification"
-        >
+        <button className="event-modal__close" onClick={handleClose}>
           ×
         </button>
 
@@ -43,21 +46,17 @@ const EventModal = () => {
         </p>
 
         <div className="event-modal__image-wrapper">
-          <img
-            src="/images/Outreach.jpeg"
-            alt="Haziel Charity Foundation 2025 Outreach Programme flyer"
-          />
+          <img src="/images/Outreach.jpeg" alt="Outreach Programme Flyer" />
         </div>
 
         <div className="event-modal__actions">
-          {/* Change href to your event route or registration link */}
-          <a
-            href="/outreach-2025"
+          <button
             className="event-modal__button event-modal__button--primary"
-            onClick={handleClose}
+            onClick={goToEvent}
           >
             View full details
-          </a>
+          </button>
+
           <button
             className="event-modal__button event-modal__button--ghost"
             onClick={handleClose}
