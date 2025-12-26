@@ -1,40 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./sponsors.scss";
 
 const Sponsors = () => {
-  // Define an array of sponsor logos
-  const sponsorLogos = [
-    "logo1.png",
-    "logo2.jpeg",
-    "logo3.jpeg",
-    "logo4.jpeg",
-    "logo5.jpeg",
-  ];
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Function to switch to the next slide
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % sponsorLogos.length);
-  };
-
-  useEffect(() => {
-    // Automatically switch to the next slide every 10 seconds
-    const interval = setInterval(nextSlide, 10000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="sponsors-container">
-      <div className="sponsors-logos">
-        {sponsorLogos.map((logo, index) => (
-          <img
-            key={index}
-            src={`/images/${logo}`}
-            alt={`Sponsor ${index + 1}`}
-            className={index === currentSlide ? "active" : ""}
-          />
-        ))}
+      <div className="partners-section">
+        <h2>Partners & Supporters</h2>
+        <p className="partners-description">
+          We are grateful for the support of individuals, organizations, and communities who share our vision of making a positive impact. Together, we can create lasting change.
+        </p>
+        <div className="partners-cta">
+          <p className="cta-text">Interested in partnering with us?</p>
+          <Link to="/contact" className="partner-button">
+            Become a Partner
+          </Link>
+        </div>
+        <div className="impact-stats">
+          <div className="stat-item">
+            <h3>Our Mission</h3>
+            <p>Supporting communities in need across Nigeria and Africa</p>
+          </div>
+          <div className="stat-item">
+            <h3>Our Focus</h3>
+            <p>Healthcare, Education, Women Empowerment & Community Development</p>
+          </div>
+          <div className="stat-item">
+            <h3>Join Us</h3>
+            <p>Together we can make a difference</p>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,54 +1,175 @@
 .sponsors-container {
   text-align: center;
   margin-bottom: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e9 100%);
 }
 
-.sponsors-logos {
-  display: flex;
-  flex-wrap: wrap; /* Allow logos to wrap to the next line */
-  justify-content: center;
-  align-items: center;
-}
+.partners-section {
+  max-width: 1200px;
+  margin: 0 auto;
 
-.sponsors-logos img {
-  width: 100px; /* Adjust the size of the logos as needed */
-  height: auto;
-  margin: 10px; /* Adjust the spacing between logos */
-  opacity: 0.5; /* Adjust the opacity of inactive logos */
-}
+  h2 {
+    font-size: 36px;
+    color: #019933ff;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
 
-.sponsors-logos img.active {
-  opacity: 1; /* Make the active logo fully visible */
+  .partners-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .partners-cta {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .cta-text {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .partner-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #019933ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #017a28;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(1, 153, 51, 0.3);
+      }
+    }
+  }
+
+  .impact-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+
+    .stat-item {
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      padding: 25px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        font-size: 22px;
+        color: #019933ff;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+      }
+    }
+  }
 }
 
 /* Extra Small Devices (Portrait Phones, less than 576px) */
 @media (max-width: 575.98px) {
-  .sponsors-logos img {
-    width: 60px; /* Smaller logos for small screens */
-    margin: 5px; /* Reduce spacing between logos */
+  .sponsors-container {
+    padding: 40px 15px;
+  }
+
+  .partners-section {
+    h2 {
+      font-size: 28px;
+    }
+
+    .partners-description {
+      font-size: 16px;
+    }
+
+    .partners-cta {
+      padding: 20px;
+
+      .cta-text {
+        font-size: 18px;
+      }
+
+      .partner-button {
+        padding: 10px 25px;
+        font-size: 14px;
+      }
+    }
+
+    .impact-stats {
+      gap: 20px;
+
+      .stat-item {
+        min-width: 100%;
+        padding: 20px;
+
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 
 /* Small Devices (Tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .sponsors-logos img {
-    width: 80px; /* Medium-sized logos for tablets */
-    margin: 7px; /* Adjust spacing between logos */
+  .partners-section {
+    h2 {
+      font-size: 32px;
+    }
+
+    .partners-description {
+      font-size: 17px;
+    }
+
+    .impact-stats {
+      .stat-item {
+        min-width: 45%;
+      }
+    }
   }
 }
 
 /* Medium Devices (Desktops, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .sponsors-logos img {
-    width: 90px; /* Slightly larger logos for medium screens */
-    margin: 8px; /* Adjust spacing between logos */
-  }
-}
-
-/* Large Devices (Large Desktops, 992px and up) */
-@media (min-width: 992px) {
-  .sponsors-logos img {
-    width: 100px; /* Default size for large screens */
-    margin: 10px; /* Default spacing between logos */
+  .partners-section {
+    .impact-stats {
+      .stat-item {
+        min-width: 30%;
+      }
+    }
   }
 }

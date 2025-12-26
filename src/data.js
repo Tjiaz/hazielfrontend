@@ -3,30 +3,30 @@
 const teamData = [
   {
     id: 1,
-    imgSrc: "/images/campaignpix1.jpeg",
-    title: "Girls' Education in Northern Nigeria",
+    imgSrc: "/images/event2024/1.png",
+    title: "Haziel Charity Inauguration 2024",
     description:
-      "This initiative focuses on providing education to girls in Northern Nigeria, where access to schooling can be limited. By building schools and providing scholarships, we aim to empower girls through education.",
+      "Launching of Haziel Charity Foundation. The inauguration ceremony marked a significant milestone in our mission to serve communities in need, bringing together community leaders, supporters, and beneficiaries.",
     buttonText: "Learn more",
-    link: "/girls-education-northern-nigeria",
+    link: "/event/1",
   },
   {
     id: 2,
-    imgSrc: "/images/campaignpix2.jpeg",
-    title: "Vocational Training for Women in Lagos",
+    imgSrc: "/images/Outreach.jpeg",
+    title: "2025 Outreach Programme",
     description:
-      "Our vocational training program in Lagos provides women with skills in tailoring, hairdressing, and other trades. The goal is to enable women to become self-sufficient and economically independent.",
+      "Join us for our comprehensive 2025 Outreach Programme featuring free medical outreach services, distribution of palliatives, widow empowerment initiatives, and scholarship opportunities for deserving students.",
     buttonText: "Learn more",
-    link: "/vocational-training-women-lagos",
+    link: "/event/2",
   },
   {
     id: 3,
-    imgSrc: "/images/campaignpix3.jpeg",
-    title: "Medical Outreach in Rural Nigeria",
+    imgSrc: "/images/event2024/3.png",
+    title: "Haziel Charity Foundation Events",
     description:
-      "This project organizes medical outreach programs in rural areas of Nigeria, providing free medical check-ups, treatments, and health education to underserved communities.",
+      "Our foundation actively organizes various community events including medical outreach programs, educational initiatives, and empowerment programs to support underserved communities across Nigeria.",
     buttonText: "Learn more",
-    link: "/Medical-Outreach-in-Rural-Nigeria",
+    link: "/eventts",
   },
   {
     id: 4,

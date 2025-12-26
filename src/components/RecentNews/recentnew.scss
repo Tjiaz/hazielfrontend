@@ -12,6 +12,12 @@
   margin-bottom: 2px;
   color: #777777;
   text-align: center;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .title h1 {
@@ -30,30 +36,55 @@
   margin: 0 auto;
 }
 
+.recent-news-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
 .recent-content {
-  width: 90%;
+  width: 100%;
   background-color: #ffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: auto;
-  padding: 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 4px solid #c79732;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(5px);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .date {
   text-align: center;
   color: #777777;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
 .recent-link {
   text-decoration: none;
   color: #232323;
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .recent-link:hover {
@@ -65,12 +96,13 @@
   text-transform: uppercase;
   background-color: transparent;
   color: #000;
-  padding: 10px 20px;
+  padding: 8px 18px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   font-size: 12px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
+  margin-top: 5px;
 }
 
 .button.recent-button:hover {
@@ -90,9 +122,23 @@
     font-size: small;
   }
 
+  .recent-news-container {
+    padding: 0 15px;
+  }
+
   .recent-content {
-    padding: 20px;
-    gap: 10px;
+    padding: 20px 25px;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .recent-text {
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+  }
+
+  .recent-link {
+    font-size: 16px;
   }
 }
 
@@ -108,9 +154,14 @@
     font-size: small;
   }
 
+  .recent-news-container {
+    max-width: 900px;
+  }
+
   .recent-content {
-    padding: 30px;
-    gap: 10px;
+    padding: 25px 35px;
+    gap: 8px;
+    margin-bottom: 15px;
   }
 }
 
@@ -126,9 +177,14 @@
     font-size: medium;
   }
 
+  .recent-news-container {
+    max-width: 950px;
+  }
+
   .recent-content {
-    padding: 40px;
-    gap: 12px;
+    padding: 30px 40px;
+    gap: 10px;
+    margin-bottom: 15px;
   }
 }
 
@@ -144,8 +200,13 @@
     font-size: large;
   }
 
+  .recent-news-container {
+    max-width: 1000px;
+  }
+
   .recent-content {
-    padding: 50px;
-    gap: 12px;
+    padding: 30px 40px;
+    gap: 10px;
+    margin-bottom: 15px;
   }
 }

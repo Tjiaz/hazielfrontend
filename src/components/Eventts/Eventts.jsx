@@ -33,13 +33,12 @@ const Eventts = () => {
       date: "December 2, 2025",
       mainImage: "/images/Outreach.jpeg",
       galleryImages: [
-        "/images/event2024/1.png",
-
+        "/images/event2025/e1.jpeg",
         // Add more images as needed
       ],
       description:
         "Free Medical outreach,ditributionof parliatives, widow empowerment,scholarships,etc..",
-      fullDescription: "Extended description for the event page...",
+      fullDescription: "Join us for our comprehensive 2025 Outreach Programme featuring free medical outreach services, distribution of palliatives to underserved communities, widow empowerment initiatives, and scholarship opportunities for deserving students. This event aims to provide essential healthcare services, support vulnerable families, empower widows through skills training and resources, and offer educational support to children in need. Together, we're making a meaningful impact in Abakaliki, Ebonyi State.",
       location: "WDC Abakaliki Ebonyi State",
       time: "12:00 PM",
     },

@@ -75,10 +75,10 @@ const Footers = () => {
         <hr className="horizontal_line" />
         <p>
           © {date} haziel Charity. All rights reserved.
-          <Link style={style} to="https://www.azcodezone.com">
+          <a style={style} href="https://www.azbytegems.com" target="_blank" rel="noopener noreferrer">
             {" "}
             Powered by AzByteGems
-          </Link>
+          </a>
         </p>
       </div>
     </footer>

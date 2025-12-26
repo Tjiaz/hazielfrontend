@@ -44,10 +44,10 @@ const EventDetails = () => {
       host: "Haziel Charity",
       date: "December 2, 2025",
       mainImage: "/images/Outreach.jpeg",
-      galleryImages: [""],
-      videos: [""],
+      galleryImages: ["/images/event2025/e1.jpeg"],
+      videos: ["/images/event2025/video1.mp4", "/images/event2025/video2.mp4"],
       description: "Coming",
-      fullDescription: "Coming soon",
+      fullDescription: "Join us for our comprehensive 2025 Outreach Programme featuring free medical outreach services, distribution of palliatives to underserved communities, widow empowerment initiatives, and scholarship opportunities for deserving students. This event aims to provide essential healthcare services, support vulnerable families, empower widows through skills training and resources, and offer educational support to children in need. Together, we're making a meaningful impact in Abakaliki, Ebonyi State.",
       location: "Abakaliki Nigeria",
       time: "12:00PM",
     },
@@ -84,37 +84,41 @@ const EventDetails = () => {
         <p>{event.fullDescription}</p>
       </div>
 
-      <div className="event-gallery">
-        <h2>Event Gallery</h2>
-        <div className="gallery-grid">
-          {event.galleryImages.map((image, index) => (
-            <div className="gallery-item" key={index}>
-              <img
-                src={event.galleryImages[index]}
-                alt={event.title}
-                onError={(e) => {
-                  e.target.src = "/images/default.jpg";
-                  e.target.onerror = null;
-                }}
-              />
-            </div>
-          ))}
+      {event.galleryImages && event.galleryImages.filter(img => img && img.trim() !== "").length > 0 && (
+        <div className="event-gallery">
+          <h2>Event Gallery</h2>
+          <div className="gallery-grid">
+            {event.galleryImages.filter(img => img && img.trim() !== "").map((image, index) => (
+              <div className="gallery-item" key={index}>
+                <img
+                  src={image}
+                  alt={event.title}
+                  onError={(e) => {
+                    e.target.src = "/images/default.jpg";
+                    e.target.onerror = null;
+                  }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
-      <div className="event-videos">
-        <h2>Event Videos</h2>
-        <div className="video-grid">
-          {event.videos.map((video, index) => (
-            <div className="video-item" key={index}>
-              <video controls>
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          ))}
+      {event.videos && event.videos.filter(vid => vid && vid.trim() !== "").length > 0 && (
+        <div className="event-videos">
+          <h2>Event Videos</h2>
+          <div className="video-grid">
+            {event.videos.filter(vid => vid && vid.trim() !== "").map((video, index) => (
+              <div className="video-item" key={index}>
+                <video controls>
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
